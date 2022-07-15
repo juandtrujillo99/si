@@ -1,0 +1,11 @@
+ErrorDocument 400 http://sylvibrand.cf/pagina-no-encontrada/
+ErrorDocument 401 http://sylvibrand.cf/pagina-no-encontrada/
+ErrorDocument 403 http://sylvibrand.cf/pagina-no-encontrada/
+ErrorDocument 404 http://sylvibrand.cf/pagina-no-encontrada/
+ErrorDocument 503 http://sylvibrand.cf/pagina-no-encontrada/
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^.*$ ./index.php
+Options All -Indexes
